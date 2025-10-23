@@ -92,6 +92,7 @@ fun ActivitasPertama(modifier: Modifier) {
         Card(
             modifier = Modifier
                 .fillMaxWidth(fraction = 1f)
+                .clip(RoundedCornerShape(16.dp))
                 .shadow(12.dp, RoundedCornerShape(16.dp), clip = false)
                 .padding(12.dp),
             shape = RoundedCornerShape(16.dp),
