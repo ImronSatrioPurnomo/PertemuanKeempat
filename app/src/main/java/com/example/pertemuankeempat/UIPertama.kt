@@ -98,8 +98,9 @@ fun ActivitasPertama(modifier: Modifier) {
                 )
                 .padding(all = 12.dp),
             shape = RoundedCornerShape(16.dp),
+            // warna dasar navy elegan dengan gradasi halus
             colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
+                containerColor = Color.Transparent // biar gradient kelihatan
             ),
             elevation = CardDefaults.cardElevation(
                 defaultElevation = 8.dp,
@@ -108,34 +109,50 @@ fun ActivitasPertama(modifier: Modifier) {
             ),
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
         ) {
-            Row() {
-                val gambar = painterResource(id = R.drawable.tewas_mengenaskan)
-                Image(
-                    painter = gambar,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(size = 100.dp)
-                        .padding(all = 5.dp)
-                )
-                Spacer(modifier = Modifier.width(width = 30.dp))
-                Column() {
-                    Text(
-                        text = stringResource(id = R.string.nama),
-                        fontSize = 30.sp,
-                        fontFamily = Cinzel,
-                        fontWeight = FontWeight.Bold,
-                        color = Color.White,
-                        modifier = Modifier.padding(top = 12.dp)
+            // lapisan gradient background dalam Card
+            Box(
+                modifier = Modifier
+                    .background(
+                        brush = Brush.linearGradient(
+                            colors = listOf(
+                                Color(0xFF0D1B2A), // biru donker elegan
+                                Color(0xFF1B263B), // sedikit lebih terang
+                                Color(0xFF415A77)  // aksen biru abu lembut
+                            )
+                        )
                     )
-                    Text(
-                        text = stringResource(id = R.string.alamat),
-                        fontSize = 18.sp,
-                        color = Color.Yellow,
-                        modifier = Modifier.padding(top = 10.dp)
+                    .padding(8.dp)
+            ) {
+                Row {
+                    val gambar = painterResource(id = R.drawable.tewas_mengenaskan)
+                    Image(
+                        painter = gambar,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(size = 100.dp)
+                            .padding(all = 5.dp)
                     )
+                    Spacer(modifier = Modifier.width(width = 30.dp))
+                    Column {
+                        Text(
+                            text = stringResource(id = R.string.nama),
+                            fontSize = 30.sp,
+                            fontFamily = Cinzel,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White,
+                            modifier = Modifier.padding(top = 12.dp)
+                        )
+                        Text(
+                            text = stringResource(id = R.string.alamat),
+                            fontSize = 18.sp,
+                            color = Color(0xFFFFD700), // gold elegan buat kontras
+                            modifier = Modifier.padding(top = 10.dp)
+                        )
+                    }
                 }
             }
         }
+
 
         Box(
             modifier = Modifier
