@@ -20,8 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             PertemuanKeempatTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    ActivitasPertama(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
