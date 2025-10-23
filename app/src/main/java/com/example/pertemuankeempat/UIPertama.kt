@@ -30,13 +30,26 @@ import com.example.pertemuankeempat.ui.theme.Cinzel
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.draw.blur
 
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
-    Column (modifier = Modifier
-        .padding(top = 100.dp)
-        .fillMaxSize(),
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .blur(10.dp) // efek blur lembut di background
+            .background(
+                brush = Brush.linearGradient(
+                    colors = listOf(
+                        Color(0xFFEBEBEB), // abu muda di atas
+                        Color(0xFFB0B0B0), // abu sedang
+                        Color(0xFF8C8C8C)  // abu agak gelap di bawah
+                    )
+                )
+            )
+            .padding(top = 100.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ){
         Text(
