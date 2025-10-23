@@ -70,7 +70,7 @@ fun ActivitasPertama(modifier: Modifier){
             // outline tipis biar classy
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
         ){
-            Row (){
+            Row() {
                 val gambar = painterResource(id = R.drawable.tewas_mengenaskan)
                 Image(
                     painter = gambar,
@@ -80,8 +80,9 @@ fun ActivitasPertama(modifier: Modifier){
                         .padding(all = 5.dp)
                 )
                 Spacer(modifier = Modifier.width(width = 30.dp))
-                Column (){
-                    Text(text = stringResource(id = R.string.nama),
+                Column() {
+                    Text(
+                        text = stringResource(id = R.string.nama),
                         fontSize = 30.sp,
                         fontFamily = Cinzel,
                         fontWeight = FontWeight.Bold,
