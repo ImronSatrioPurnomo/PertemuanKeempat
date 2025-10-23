@@ -26,6 +26,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.pertemuankeempat.ui.theme.Cinzel
+
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
@@ -67,11 +69,11 @@ fun ActivitasPertama(modifier: Modifier){
                         fontFamily = Cinzel,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
-                        modifier = Modifier.padding(top = 15.dp)
+                        modifier = Modifier.padding(top = 12.dp)
                     )
                     Text(
                         text = stringResource(id = R.string.alamat),
-                        fontSize = 28.sp,
+                        fontSize = 18.sp,
                         color = Color.Yellow,
                         modifier = Modifier.padding(top = 10.dp)
                     )
