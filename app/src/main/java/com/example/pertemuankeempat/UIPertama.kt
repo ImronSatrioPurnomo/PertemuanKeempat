@@ -27,6 +27,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuankeempat.ui.theme.Cinzel
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.shadow
 
 
 @Composable
@@ -45,13 +48,27 @@ fun ActivitasPertama(modifier: Modifier){
             fontSize = 22.sp
         )
         Spacer(modifier = Modifier.height(height = 25.dp))
-        Card (
+        Card(
             modifier = Modifier
                 .fillMaxWidth(fraction = 1f)
+                // shadow di luar card biar keliatan ngangkat
+                .shadow(
+                    elevation = 12.dp,
+                    shape = RoundedCornerShape(16.dp),
+                    clip = false
+                )
                 .padding(all = 12.dp),
+            shape = RoundedCornerShape(16.dp),
             colors = CardDefaults.cardColors(
                 containerColor = Color.DarkGray
-            )
+            ),
+            elevation = CardDefaults.cardElevation(
+                defaultElevation = 8.dp,
+                pressedElevation = 2.dp,
+                focusedElevation = 12.dp
+            ),
+            // outline tipis biar classy
+            border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
         ){
             Row (){
                 val gambar = painterResource(id = R.drawable.tewas_mengenaskan)
