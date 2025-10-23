@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pertemuankeempat.ui.theme.Cinzel
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
@@ -36,6 +37,19 @@ import androidx.compose.ui.draw.blur
 
 @Composable
 fun ActivitasPertama(modifier: Modifier){
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.radialGradient(
+                    colors = listOf(
+                        Color.White.copy(alpha = 0.25f),
+                        Color.Transparent
+                    ),
+                    radius = 600f
+                )
+            )
+    )
     Column(
         modifier = Modifier
             .fillMaxSize()
