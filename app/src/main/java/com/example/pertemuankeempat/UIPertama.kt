@@ -33,10 +33,27 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.draw.blur
+import androidx.compose.ui.zIndex
 
 
 @Composable
-fun ActivitasPertama(modifier: Modifier){
+fun ActivitasPertama(modifier: Modifier) {
+    // Layer 1: background gradient
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(
+                brush = Brush.linearGradient(
+                    colors = listOf(
+                        Color(0xFFEBEBEB),
+                        Color(0xFFB0B0B0),
+                        Color(0xFF8C8C8C)
+                    )
+                )
+            )
+    )
+
+    // Layer 2: soft glow (blurred radial light)
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -49,36 +66,31 @@ fun ActivitasPertama(modifier: Modifier){
                     radius = 600f
                 )
             )
+            .blur(40.dp) // blur cahaya, bukan kontennya
     )
+
+    // Layer 3: konten utama (tanpa blur)
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .blur(10.dp) // efek blur lembut di background
-            .background(
-                brush = Brush.linearGradient(
-                    colors = listOf(
-                        Color(0xFFEBEBEB), // abu muda di atas
-                        Color(0xFFB0B0B0), // abu sedang
-                        Color(0xFF8C8C8C)  // abu agak gelap di bawah
-                    )
-                )
-            )
-            .padding(top = 100.dp),
+            .padding(top = 100.dp)
+            .zIndex(1f), // pastikan di atas glow
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Text(
             text = stringResource(R.string.prodi),
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold
         )
-        Text(text = stringResource(id = R.string.univ),
+        Text(
+            text = stringResource(id = R.string.univ),
             fontSize = 22.sp
         )
         Spacer(modifier = Modifier.height(height = 25.dp))
+
         Card(
             modifier = Modifier
                 .fillMaxWidth(fraction = 1f)
-                // shadow di luar card biar keliatan ngangkat
                 .shadow(
                     elevation = 12.dp,
                     shape = RoundedCornerShape(16.dp),
@@ -94,9 +106,8 @@ fun ActivitasPertama(modifier: Modifier){
                 pressedElevation = 2.dp,
                 focusedElevation = 12.dp
             ),
-            // outline tipis biar classy
             border = BorderStroke(1.dp, Color.White.copy(alpha = 0.08f))
-        ){
+        ) {
             Row() {
                 val gambar = painterResource(id = R.drawable.tewas_mengenaskan)
                 Image(
@@ -125,10 +136,11 @@ fun ActivitasPertama(modifier: Modifier){
                 }
             }
         }
+
         Box(
             modifier = Modifier
                 .fillMaxSize()
-        ){
+        ) {
             Text(
                 text = stringResource(id = R.string.copy),
                 modifier = Modifier
