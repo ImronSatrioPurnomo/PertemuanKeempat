@@ -228,7 +228,15 @@ fun ActivitasPertama(modifier: Modifier) {
                         .fillMaxWidth()
                         .padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
-                )
+                ){
+                    val logoRed = painterResource(id = R.drawable.tewas_mengenaskan)
+                    Image(
+                        painter = logoRed,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(100.dp)
+                            .padding(5.dp)
+                    )
         }
 
 
