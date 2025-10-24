@@ -201,7 +201,7 @@ fun ActivitasPertama(modifier: Modifier) {
                         Text(
                             text = stringResource(id = R.string.alamat_biru),
                             fontSize = 16.sp,
-                            color = Color.White
+                            color = Color(0xFFFFD700)
                         )
                     }
                 }
@@ -255,7 +255,7 @@ fun ActivitasPertama(modifier: Modifier) {
                         Text(
                             text = stringResource(id = R.string.alamat_merah),
                             fontSize = 16.sp,
-                            color = Color.White
+                            color = Color(0xFFFFD700)
                         )
                     }
                 }
