@@ -175,7 +175,7 @@ fun ActivitasPertama(modifier: Modifier) {
                         .padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val logoBlue = painterResource(id = R.drawable.tewas_mengenaskan)
+                    val logoBlue = painterResource(id = R.drawable.geramnya_aku)
                     Image(
                         painter = logoBlue,
                         contentDescription = null,
@@ -229,7 +229,7 @@ fun ActivitasPertama(modifier: Modifier) {
                         .padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val logoRed = painterResource(id = R.drawable.tewas_mengenaskan)
+                    val logoRed = painterResource(id = R.drawable.udahyapping)
                     Image(
                         painter = logoRed,
                         contentDescription = null,
