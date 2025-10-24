@@ -1,8 +1,12 @@
 <resources>
+    <!-- Card utama -->
     <string name="app_name">PertemuanKeempat</string>
     <string name="prodi">Teknologi Informasi</string>
     <string name="univ">Universitas Muhammadiyah yogyakarta</string>
     <string name="nama">Imron</string>
     <string name="alamat">Sleman</string>
     <string name="copy">copyright, 2025</string>
+
+    <!-- Card biru -->
+    <string name="nama_biru">Isi Nama</string>
 </resources>
