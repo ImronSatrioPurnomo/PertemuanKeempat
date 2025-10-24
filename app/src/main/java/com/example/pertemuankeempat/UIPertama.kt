@@ -168,13 +168,44 @@ fun ActivitasPertama(modifier: Modifier) {
                         )
                     )
                     .padding(8.dp)
-            ){
+            ) {
                 Row(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(8.dp),
                     verticalAlignment = Alignment.CenterVertically
-                )
+                ) {
+                    val logoBlue = painterResource(id = R.drawable.tewas_mengenaskan)
+                    Image(
+                        painter = logoBlue,
+                        contentDescription = null,
+                        modifier = Modifier
+                            .size(100.dp)
+                            .padding(5.dp)
+                    )
+                    Spacer(modifier = Modifier.width(24.dp))
+                    Column {
+                        Text(
+                            text = stringResource(id = R.string.nama_biru),
+                            fontSize = 26.sp,
+                            fontFamily = Cinzel,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White
+                        )
+                        Text(
+                            text = stringResource(id = R.string.nim_biru),
+                            fontSize = 16.sp,
+                            color = Color.White,
+                            modifier = Modifier.padding(top = 6.dp)
+                        )
+                        Text(
+                            text = stringResource(id = R.string.alamat_biru),
+                            fontSize = 16.sp,
+                            color = Color.White
+                        )
+                    }
+                }
+            }
         }
 
 
