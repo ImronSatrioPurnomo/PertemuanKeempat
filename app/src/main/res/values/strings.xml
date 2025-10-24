@@ -15,4 +15,5 @@
     <!-- Card merah -->
     <string name="nama_merah">Isi Nama</string>
     <string name="nim_merah">Isi NIM</string>
+    <string name="alamat_merah">Isi Alamat</string>
 </resources>
