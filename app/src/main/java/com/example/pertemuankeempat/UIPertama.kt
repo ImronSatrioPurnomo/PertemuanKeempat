@@ -153,7 +153,7 @@ fun ActivitasPertama(modifier: Modifier) {
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
-
+           //card biru
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -207,7 +207,7 @@ fun ActivitasPertama(modifier: Modifier) {
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
-
+            //card merah
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
