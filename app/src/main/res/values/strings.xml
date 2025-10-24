@@ -10,4 +10,5 @@
     <!-- Card biru -->
     <string name="nama_biru">Isi Nama</string>
     <string name="nim_biru">Isi NIM</string>
+    <string name="alamat_biru">Isi Alamat</string>
 </resources>
