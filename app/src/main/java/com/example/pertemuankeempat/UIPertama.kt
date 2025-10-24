@@ -153,6 +153,22 @@ fun ActivitasPertama(modifier: Modifier) {
                 }
             }
             Spacer(modifier = Modifier.height(16.dp))
+
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(16.dp))
+                    .background(
+                        brush = Brush.linearGradient(
+                            colors = listOf(
+                                Color(0xFF0B2A4A),
+                                Color(0xFF123A63),
+                                Color(0xFF2E5E8A)
+                            )
+                        )
+                    )
+                    .padding(8.dp)
+            )
         }
 
 
