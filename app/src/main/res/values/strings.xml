@@ -8,12 +8,12 @@
     <string name="copy">copyright, 2025</string>
 
     <!-- Card biru -->
-    <string name="nama_biru">Isi Nama</string>
-    <string name="nim_biru">Isi NIM</string>
-    <string name="alamat_biru">Isi Alamat</string>
+    <string name="nama_biru">budi yanto</string>
+    <string name="nim_biru">2024001023</string>
+    <string name="alamat_biru">Sleman</string>
 
     <!-- Card merah -->
-    <string name="nama_merah">Isi Nama</string>
-    <string name="nim_merah">Isi NIM</string>
-    <string name="alamat_merah">Isi Alamat</string>
+    <string name="nama_merah">Bambang suyono</string>
+    <string name="nim_merah">2024001024</string>
+    <string name="alamat_merah">Bantul</string>
 </resources>
