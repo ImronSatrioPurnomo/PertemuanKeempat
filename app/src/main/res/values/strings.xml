@@ -11,4 +11,7 @@
     <string name="nama_biru">Isi Nama</string>
     <string name="nim_biru">Isi NIM</string>
     <string name="alamat_biru">Isi Alamat</string>
+
+    <!-- Card merah -->
+    <string name="nama_merah">Isi Nama</string>
 </resources>
